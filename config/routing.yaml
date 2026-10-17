@@ -1,0 +1,30 @@
+pools:
+  summarize:
+    concurrency: 2
+    queue_size: 8
+    token_budget: 12000
+    model: mock-primary
+    fallback_model: mock-fallback
+  classify:
+    concurrency: 2
+    queue_size: 8
+    token_budget: 12000
+    model: mock-primary
+    fallback_model: mock-fallback
+  extract:
+    concurrency: 2
+    queue_size: 8
+    token_budget: 12000
+    model: mock-primary
+    fallback_model: mock-fallback
+
+tenants:
+  default:
+    concurrency: 2
+    queue_size: 8
+    token_budget: 20000
+
+skills:
+  summarize: summarize
+  classify: classify
+  extract: extract
